@@ -13,10 +13,8 @@ Git and Git Flow Cheat Sheet Português do Brasil [![Awesome](https://cdn.rawgit
 5. [Espanhol Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-es.md)
 
 Git cheat sheet salva você de decorar os comandos.
-Git cheat sheet saves you from learning all the commands by heart.
 
-Sinta-se livre para contribuir, atualizar os erros de gramática . Você pode também adicionar um arquivo do seu idioma.
-Be free to contribute, update the grammar mistakes. You are also free to add your language file.
+Sinta-se livre para contribuir e/ou atualizar os erros de gramática . Você pode também adicionar um arquivo do seu idioma.
 <hr>
 
 Git Cheat Sheet Português do Brasil
@@ -38,7 +36,7 @@ Git Cheat Sheet Português do Brasil
 <hr>
 ##Configuração
 
-#####Mostrar a configuração ataual:
+#####Mostrar a configuração atual:
 ```
 $ git config --list
 ```
