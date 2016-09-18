@@ -1,77 +1,77 @@
-Git and Git Flow Cheat Sheet[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+Git and Git Flow Cheat Sheet Português do Brasil [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 ===============
 <hr>
 <p align="center">
-	<img alt="Git" src="./Img/git-logo.png" height="190" width="455">
+	<img alt="Git" src="../Img/git-logo.png" height="190" width="455">
 </p>
 <hr>
-# Other Available Languages:
-1. [Arabic Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-ar.md)
-2. [Chinese Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-zh.md)
-3. [Hindi Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-hi.md)
-4. [Turkish Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-tr.md)
-5. [Spanish Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-es.md)
-6. [Brazilian Portuguese Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-pt_br.md)
+# Outras línguas disponíveis:
+1. [Árabe Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-ar.md)
+2. [Chinês Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-zh.md)
+3. [Híndi Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-hi.md)
+4. [Turco Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-tr.md)
+5. [Espanhol Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-es.md)
 
+Git cheat sheet salva você de decorar os comandos.
 Git cheat sheet saves you from learning all the commands by heart.
 
+Sinta-se livre para contribuir, atualizar os erros de gramática . Você pode também adicionar um arquivo do seu idioma.
 Be free to contribute, update the grammar mistakes. You are also free to add your language file.
 <hr>
 
-Git Cheat Sheet English
+Git Cheat Sheet Português do Brasil
 ===============
-###Index
-* [Set Up](#setup)
-* [Configuration Files](#configuration-files)
-* [Create](#create)
-* [Local Changes](#local-changes)
-* [Search](#search)
-* [Commit History](#commit-history)
+###Índice
+* [Configuração](#setup)
+* [Arquivos de Configuração](#configuration-files)
+* [Criar](#create)
+* [Mudanças locais](#local-changes)
+* [Buscar](#search)
+* [Histórico de Commits](#commit-history)
 * [Branches & Tags](#branches--tags)
-* [Update & Publish](#update--publish)
+* [Atualizar & Publicar](#update--publish)
 * [Merge & Rebase](#merge--rebase)
-* [Undo](#undo)
+* [Desfazer](#undo)
 * [Git Flow](#git-flow)
 
 
 <hr>
-##Setup
+##Configuração
 
-#####Show current configuration:
+#####Mostrar a configuração ataual:
 ```
 $ git config --list
 ```
-#####Show repository configuration:
+#####Mostrar a configuração do repositório:
 ```
 $ git config --local --list
 ```
 
-#####Show global configuration:
+#####Mostrar a configuração global:
 ```
 $ git config --global --list
 ```
 
-#####Show system configuration:
+#####Mostrar a configuração do sistema:
 ```
 $ git config --system --list
 ```
 
-#####Set a name that is identifiable for credit when review version history:
+#####Definir um nome que é usado para crédito quando se revisa o histórico de versão:
 ```
 $ git config --global user.name “[firstname lastname]”
 ```
 
-#####Set an email address that will be associated with each history marker:
+#####Definir um endereço de email que será associado com cada marca no histórico:
 ```
 $ git config --global user.email “[valid-email]”
 ```
-
-#####Set automatic command line coloring for Git for easy reviewing:
+#####Definir cores automáticas na linha de comando do Git para fácil revisão:
 ```
 $ git config --global color.ui auto
 ```
 
-#####Set global editor for commit
+#####Definir o editor global para commit
 ```
 $ git config --global core.editor vi
 ```
