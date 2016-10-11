@@ -5,6 +5,7 @@ Git and Git Flow Cheat Sheet Português do Brasil [![Awesome](https://cdn.rawgit
 	<img alt="Git" src="../Img/git-logo.png" height="190" width="455">
 </p>
 <hr>
+
 # Outras línguas disponíveis:
 1. [Árabe Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-ar.md)
 2. [Chinês Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-zh.md)
@@ -19,7 +20,7 @@ Sinta-se livre para contribuir e/ou atualizar os erros de gramática . Você pod
 
 Git Cheat Sheet Português do Brasil
 ===============
-###Índice
+### Índice
 * [Configuração](#setup)
 * [Arquivos de Configuração](#configuration-files)
 * [Criar](#create)
@@ -34,171 +35,175 @@ Git Cheat Sheet Português do Brasil
 
 
 <hr>
-##Configuração
 
-#####Mostrar a configuração atual:
+## Configuração
+
+##### Mostrar a configuração atual:
 ```
 $ git config --list
 ```
-#####Mostrar a configuração do repositório:
+##### Mostrar a configuração do repositório:
 ```
 $ git config --local --list
 ```
 
-#####Mostrar a configuração global:
+##### Mostrar a configuração global:
 ```
 $ git config --global --list
 ```
 
-#####Mostrar a configuração do sistema:
+##### Mostrar a configuração do sistema:
 ```
 $ git config --system --list
 ```
 
-#####Definir um nome que é usado para crédito quando se revisa o histórico de versão:
+##### Definir um nome que é usado para crédito quando se revisa o histórico de versão:
 ```
-$ git config --global user.name “[firstname lastname]”
+$ git config --global user.name "[primeiroNome sobrenome]"
 ```
 
-#####Definir um endereço de email que será associado com cada marca no histórico:
+##### Definir um endereço de email que será associado com cada marca no histórico:
 ```
-$ git config --global user.email “[valid-email]”
+$ git config --global user.email "[valid-email]"
 ```
-#####Definir cores automáticas na linha de comando do Git para fácil revisão:
+##### Definir cores automáticas na linha de comando do Git para fácil revisão:
 ```
 $ git config --global color.ui auto
 ```
 
-#####Definir o editor global para commit
+##### Definir o editor global para commit
 ```
 $ git config --global core.editor vi
 ```
 
 <hr>
-##Configuration Files
 
-#####Repository specific configuration file [--local]:
+## Arquivos de Configuração
+
+##### Arquivo de configuração específico do Repositório [--local]:
 ```
 <repo>/.git/config
 ```
 
-#####User-specific configuration file [--global]:
+##### Arquivo de configuração específico do usuário [--global]:
 ```
 ~/.gitconfig
 ```
 
-#####System-wide configuration file [--system]:
+##### Arquivo de configuração do Sistema [--system]:
 ```
 /etc/gitconfig
 ```
 
 <hr>
-##Create
 
-#####Clone an existing repository:
+## Criar
 
-There are two ways:
+##### Clonar um repositório existente:
 
-Via SSH
+Existem duas maneiras:
 
-```
-$ git clone ssh://user@domain.com/repo.git
-```
-
-Via HTTP
+Através de SSH
 
 ```
-$ git clone http://domain.com/user/repo.git
+$ git clone ssh://usuario@dominio.com/repo.git
 ```
 
-#####Create a new local repository:
+Através de HTTP
+
+```
+$ git clone http://dominio.com/usuario/repo.git
+```
+
+##### Crie um novo repositório local:
 ```
 $ git init
 ```
 <hr>
-##Local Changes
 
-#####Changes in working directory:
+## Mudanças Locais
+
+##### Mudanças no diretório de trabalho:
 ```
 $ git status
 ```
 
-#####Changes to tracked files:
+##### Mudanças nos arquivos rastreados:
 ```
 $ git diff
 ```
 
-#####Add all current changes to the next commit:
+##### Adiciona todas as alterações atuais ao próximo commit:
 ```
 $ git add .
 ```
 
-#####Add some changes in &lt;file&gt; to the next commit:
+##### Adiciona algumas mudanças feitas no &lt;arquivo&gt; ao próximo commit:
 ```
-$ git add -p <file>
+$ git add -p <arquivo>
 ```
 
-#####Commit all local changes in tracked files:
+##### Realizar um commit de todas as mudanças nos arquivos rastreados:
 ```
 $ git commit -a
 ```
 
-#####Commit previously staged changes:
+##### Realizar um commit de mudanças previamente adicionadas na staging área:
 ```
 $ git commit
 ```
 
-#####Commit with message:
+##### Realizar um commit com mensagem:
 ```
-$ git commit -m 'message here'
-```
-
-#####Commit skipping the staging area and adding message:
-```
-$ git commit -am 'message here'
+$ git commit -m 'mensagem aqui'
 ```
 
-#####Commit to some previous date:
+##### Realizar um commit ignorando a staging área e adicionando uma mensagem:
 ```
-git commit --date="`date --date='n day ago'`" -am "Commit Message"
+$ git commit -am 'mensagem aqui'
 ```
 
-#####Change last commit:<br>
-<em><sub>Don't amend published commits!</sub></em>
+##### Realizar um commit para alguma data anterior:
+```
+git commit --date="`date --date='n dias atrás'`" -am "Mensagem de Commit"
+```
 
+##### Modificar o último commit:<br>
+<em><sub>Não modificar commits já publicados!</sub></em>
 ```
 $ git commit -a --amend
 ```
 
-#####Change committer date of last commit:
+##### Modificar data do último commit:
 ```
 GIT_COMMITTER_DATE="date" git commit --amend
 ```
 
-#####Change Author date of last commit:
+##### Modificar data do autor do último commit:
 ```
 git commit --amend --date="date"
 ```
 
-#####Move uncommitted changes from current branch to some other branch:<br>
+##### Mover mudanças que não foi feito commit ainda do branch atual para outro brach:<br>
 ```
 git stash
 git checkout branch2
 git stash pop
 ```
 
-#####Restore stashed changes back to current branch:
+##### Restaurar mudanças armazenadas de volta para o branch atual:
 ```
 git stash apply
 ```
 
-#####Remove the last set of stashed changes:
+##### Remover o último conjunto de mudanças armazenadas:
 ```
 git stash drop
 ```
 
 <hr>
-##Search
+
+## Search
 
 #####A text search on all files in the directory:
 ```
