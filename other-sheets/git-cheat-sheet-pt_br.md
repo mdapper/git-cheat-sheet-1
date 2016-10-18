@@ -204,115 +204,121 @@ git stash drop
 
 <hr>
 
-## Search
+## Pesquisar
 
-#####A text search on all files in the directory:
+##### Uma pesquisa de texto em todos os arquivos no diretório:
 ```
-$ git grep "Hello"
+$ git grep "Olá"
 ```
 
-#####In any version of a text search:
+##### Em qualquer versão de uma pesquisa de texto
 ```
 $ git grep "Hello" v2.5
 ```
 
 <hr>
-###Commit History
 
-#####Show all commits, starting with newest (it'll show the hash, author information, date of commit and title of the commit):
+### Histórico de Commit
+
+##### Exibe todos os commits, começando com os mais recentes (vai exibir o hash, informações do autor, data do commit e título do commit):
 ```
 $ git log
 ```
 
-#####Show all the commits(it'll show just the commit hash and the commit message):
+##### Exibe todos os commits (vai exibir o hash e a mensagem do commit):
+Show all the commits(it'll show just the commit hash and the commit message):
 ```
 $ git log --oneline
 ```
 
-#####Show all commits of a specific user:
+##### Exibe todos os commits de um usuário específico:
 ```
-$ git log --author="username"
-```
-
-#####Show changes over time for a specific file:
-```
-$ git log -p <file>
+$ git log --author="usuario"
 ```
 
-#####Display commits that are present only in remote/branch in right side
+##### Exibe mudanças ao longo do tempo para um arquivo específico:
+```
+$ git log -p <arquivo>
+```
+
+##### Mostrar commits que estão presentes apenas em remote/branch ao lado direito
 ```
 $ git log --oneline <origin/master>..<remote/master> --left-right
 ```
 
-#####Who changed, what and when in &lt;file&gt;:
+##### Quem mudou, o que e quando no &lt;arquivo&gt;:
 ```
-$ git blame <file>
+$ git blame <arquivo>
 ```
 
-#####Show Reference log:
+##### Exibe log de referência:
 ```
 $ git reflog show
 ```
 
-#####Delete Reference log:
+##### Deletar log de referência:
 ```
 $ git reflog delete
 ```
-<hr>
-##Branches & Tags
 
-#####List all local branches:
+<hr>
+
+## Branches & Tags
+
+##### Lista todos os branches locais:
 ```
 $ git branch
 ```
 
-#####List all remote branches:
+##### Lista todos os branches remotos:
 ```
 $ git branch -r
 ```
 
-#####Switch HEAD branch:
+##### Muda o HEAD para o branch indicado:
 ```
 $ git checkout <branch>
 ```
 
-#####Create and switch new branch:
+##### Cria novo branch e muda para ele:
+Create and switch new branch:
 ```
 $ git checkout -b <branch>
 ```
 
-#####Create a new branch based on your current HEAD:
+##### Cria um novo branch baseado no seu HEAD atual:
 ```
 $ git branch <new-branch>
 ```
 
-#####Create a new tracking branch based on a remote branch:
+##### Cria um novo branch rastreado baseado em um branch remoto:
 ```
-$ git branch --track <new-branch> <remote-branch>
+$ git branch --track <branch-novo> <branch-remoto>
 ```
 
-#####Delete a local branch:
+##### Deletar um branch local:
 ```
 $ git branch -d <branch>
 ```
 
-#####Force delete a local branch:
-<em><sub>You will lose unmerged changes!</sub></em>
-
+##### Força deletar um branch local:
+<em><sub>Você vai perder mudanças que não foram feitas "merge"!</sub></em>
 ```
 $ git branch -D <branch>
 ```
 
-#####Mark the current commit with a tag:
+##### Marcar o commit atual com uma tag:
 ```
-$ git tag <tag-name>
+$ git tag <nome-da-tag>
 ```
 
-#####Mark the current commit with a tag that includes a message:
+##### Marcar o commit atual com uma tag que inclui uma mensagem:
 ```
 $ git tag -a <tag-name>
 ```
+
 <hr>
+
 ##Update & Publish
 
 #####List all current configured remotes:
